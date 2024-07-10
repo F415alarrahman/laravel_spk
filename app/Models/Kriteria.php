@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Alternatif extends Model
+class Kriteria extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'jumlah_pemain',
-        'jarak',
-        'user_id'
+        'code',
+        'name'
     ];
 
-    public function user()
+    protected $table = 'kriterias';
+
+    public function matrik()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->hasMany(matrik::class, 'matrik_id');
     }
 }

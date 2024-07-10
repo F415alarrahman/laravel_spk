@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price')->default(0);
+            $table->integer('jarak')->default(0);
+            $table->integer('jenis_lapangan')->default(0);
+            $table->integer('fasilitas_lapangan')->default(0);
+            $table->integer('jumlah_pemain')->default(0);
             $table->string('telephone');
-            $table->string('img_url');
-            $table->enum('status', ['aktif', 'nonaktif'])->default('aktif');
             $table->timestamps();
         });
     }

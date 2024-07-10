@@ -18,11 +18,6 @@ return new class extends Migration
             $table->string('usertype')->default('user');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('w1')->default(0);
-            $table->integer('w2')->default(0);
-            $table->integer('w3')->default(0);
-            $table->integer('w4')->default(0);
-            $table->integer('w5')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

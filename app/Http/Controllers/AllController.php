@@ -13,7 +13,7 @@ class AllController extends Controller
 
     public function field_place()
     {
-        return view('layouts.field_place');
+        return view('ahp.field_place');
     }
 
     public function contact()

@@ -22,12 +22,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
-        'usertype',
-        'w1',
-        'w2',
-        'w3',
-        'w4',
-        'w5'
     ];
 
     /**
@@ -51,11 +45,5 @@ class User extends Authenticatable implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }
-
-
-    public function alternatifs()
-    {
-        return $this->hasMany(Alternatif::class, 'user_id');
     }
 }
